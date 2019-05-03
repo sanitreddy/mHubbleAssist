@@ -1,0 +1,38 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')" aria-hidden="true">
+      ×
+    </button>
+  </div>
+  <div class="modal-body">
+      <h4 class="modal-title">
+          Time Info
+        </h4>
+    <table id="classTable" class="table table-bordered">
+        <tr class="text-center">
+          <td>Sun</td>
+          <td>Mon</td>
+          <td>Tue</td>
+          <td>Wed</td>
+          <td>Thu</td>
+          <td>Fri</td>
+          <td>Sat</td>
+        </tr>
+        <tr class="text-center" name="timeValue" #timeValue>
+          <td> <input type="text" placeholder="0.00"></td>
+          <td> <input type="text" placeholder="0.00"> </td>
+          <td> <input type="text" placeholder="0.00"></td>
+          <td> <input type="text" placeholder="0.00"></td>
+          <td> <input type="text" placeholder="0.00"></td>
+          <td><input type="text"  placeholder="0.00"></td>
+          <td><input type="text"  placeholder="0.00"></td>
+        </tr>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button (click)="postTimeSheet(timeValue.value)" type="button" class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</div>
+
